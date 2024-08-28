@@ -12,15 +12,19 @@ class Medusa
     def statues
         @statues
     end
+
+    def stare(victim)
+        @statues << victim
+    end
 end
 
 class Person
 
-    def initialize(person)
-        @nperson = person
+    def initialize(victim)
+        @victim = victim
     end
 
-    def person
-        @person
+    def name
+        @victim
     end
 end
