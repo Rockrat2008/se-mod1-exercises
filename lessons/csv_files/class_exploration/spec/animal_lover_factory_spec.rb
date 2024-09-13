@@ -1,4 +1,5 @@
-require "./lib/animal_lover_factory"
+require "../lib/animal_lover_factory"
+require 'CSV'
 
 RSpec.describe AnimalLoverFactory do 
   it "should exist" do
@@ -10,7 +11,7 @@ RSpec.describe AnimalLoverFactory do
   it "should parse csv to create animal lover objects" do
     factory = AnimalLoverFactory.new
 
-    animal_lovers = factory.create_animal_lovers("./data/animal_lovers.csv")
+    animal_lovers = factory.create_animal_lovers("../data/animal_lovers.csv")
 
     expect(animal_lovers.count).to eq(6) 
     expect(animal_lovers).to be_all(AnimalLover)
